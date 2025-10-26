@@ -1,14 +1,14 @@
 const images = [
     "./img/Dog1.jpg",
-    "./img/Dog2.jpg",
-    "./img/Dog3.jpg",
-    "./img/Dog4.jpg",
-    "./img/Dog5.jpg",
-    "./img/Dog6.jpg",
-    "./img/Dog7.jpg",
-    "./img/Dog8.jpg",
-    "./img/Dog9.jpg",
-    "./img/Dog10.jpg"
+    "./img/dog2.jpg",
+    "./img/dog3.jpg",
+    "./img/dog4.jpg",
+    "./img/dog5.jpg",
+    "./img/dog6.jpg",
+    "./img/dog7.jpg",
+    "./img/dog8.jpg",
+    "./img/dog9.jpg",
+    "./img/dog10.jpg"
 ];
 
 const container = document.getElementById('gallery-container');
@@ -21,7 +21,7 @@ modal.classList.add('modal');
 modal.innerHTML = `
 <span class="close">&times;</span>
 <span class="arrow left">&#10094;</span>
-<img id="modal-image" class="modal-content">
+<img id="modal-image" class="modal-content" alt="Hundebild">
 <span class="arrow right">&#10095;</span>`;
 
 document.body.appendChild(modal);
