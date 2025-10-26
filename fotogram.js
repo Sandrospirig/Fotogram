@@ -18,6 +18,10 @@ const container = document.getElementById('gallery-container');
 const modal = document.createElement('div');
 modal.id = 'image-modal';
 modal.classList.add('modal');
+modal.setAttribute('role', 'dialog');
+modal.setAttribute('aria-modal', 'true');
+modal.setAttribute('aria-label', 'Galerie Modal');
+
 modal.innerHTML = `
 <span class="close">&times;</span>
 <span class="arrow left">&#10094;</span>
@@ -34,14 +38,19 @@ let currentIndex = 0;
 
 /*---render Gallery---*/
 images.forEach((src, index) => {
-
+const figure = document.createElement('figure');
 const img = document.createElement('img');
 img.src =src;
 img.alt = `Hund ${index +1}`;
 img.classList.add('thumbnail');
+img.setAttribute('tabindex','0');
+
+const figcaption = document.createElement('figcaption');
+figcaption.textContent = `Hund ${index +1}`;
 
 img.addEventListener('click', () => openModal(index));
 container.appendChild(img);
+
 });
 
 
